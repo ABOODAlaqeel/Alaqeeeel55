@@ -1,0 +1,86 @@
+:root {
+  --bg: #0b1220;
+  --card: #141d33;
+  --card-2: #1d2b4b;
+  --text: #e6eeff;
+  --accent: #ffcc33;
+  --ok: #7ee787;
+  --danger: #ff7b72;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Tajawal", "Segoe UI", system-ui, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top, #17284e, var(--bg));
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.game-layout {
+  width: min(1200px, 100%);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 330px 1fr;
+}
+
+.hud-panel,
+.canvas-panel {
+  background: linear-gradient(160deg, var(--card), var(--card-2));
+  border: 1px solid #2d3d67;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px #00000055;
+}
+
+.hud-panel {
+  padding: 1.2rem;
+}
+
+.hud-panel h1 {
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+}
+
+.hud-panel ul {
+  padding-inline-start: 1rem;
+  line-height: 1.7;
+}
+
+.stats {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.status {
+  margin-top: 1rem;
+  background: #0f1730;
+  border: 1px solid #33446f;
+  border-radius: 10px;
+  padding: 0.7rem;
+  min-height: 48px;
+}
+
+.canvas-panel {
+  padding: 0.7rem;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  background: #87ceeb;
+}
+
+@media (max-width: 950px) {
+  .game-layout {
+    grid-template-columns: 1fr;
+  }
+}
