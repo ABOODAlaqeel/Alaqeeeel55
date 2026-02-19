@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>لعبة منصات - مغامرة البطل</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-layout">
+      <section class="hud-panel">
+        <h1>مغامرة البطل</h1>
+        <p>لعبة منصات احترافية مستوحاة من ألعاب الكلاسيك.</p>
+        <ul>
+          <li><strong>التحكم:</strong> الأسهم أو A/D للحركة، Space للقفز</li>
+          <li><strong>الهدف:</strong> اجمع العملات وتجنب الوحوش والوصول للبوابة.</li>
+          <li><strong>إعادة التشغيل:</strong> زر R</li>
+        </ul>
+        <div class="stats">
+          <span>النقاط: <b id="score">0</b></span>
+          <span>الوقت: <b id="timer">120</b></span>
+          <span>الأرواح: <b id="lives">3</b></span>
+        </div>
+        <div id="status" class="status">جاهز؟ ابدأ الآن!</div>
+      </section>
+      <section class="canvas-panel">
+        <canvas id="game" width="960" height="540" aria-label="لعبة منصات"></canvas>
+      </section>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
